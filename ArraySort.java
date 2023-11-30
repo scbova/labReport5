@@ -2,15 +2,19 @@ public class ArraySort {
 
   // Returns array that is sorted
   static int[] sort(int[] arr) {
+    if (arr.length <= 1) {
+      return arr;
+    }
+
     int before = arr[0];
     
     for (int i = 1; i < arr.length; i++) {
-      if (curr > i) {
-        arr[i - 1] = i;
-        arr[i] = curr;
+      if (before > i) {
+        arr[i - 1] = arr[i];
+        arr[i] = before;
       }
 
-      curr = i;
+      before = i;
     }
     
     return arr;
