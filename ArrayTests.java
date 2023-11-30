@@ -2,38 +2,27 @@ import static org.junit.Assert.*;
 import org.junit.*;
 
 public class ArrayTests {
-	@Test 
-	public void testReverseInPlace() {
-    int[] input1 = { 3 };
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 3 }, input1);
-	}
-
-
   @Test
-  public void testReversed() {
+  public void testSort() {
     int[] input1 = { };
-    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+    assertArrayEquals(new int[]{ }, ArrayExamples.sort(input1));
   }
 
   @Test
-  public void longReverseInPlace() {
-    int[] input1 = { 3, 4, 5 };
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 5, 4, 3 }, input1);
+  public void testSort1() {
+    int[] input1 = { 3, 4, 5};
+    assertArrayEquals(new int[]{ 3, 4, 5 }, ArrayExamples.sort(input1));
   }
 
   @Test
-  public void longReversed() {
-    int[] input1 = { 4, 5, 6 };
-    assertArrayEquals(new int[]{ 6, 5, 4 }, ArrayExamples.reversed(input1));
+  public void testSort2() {
+    int[] input1 = { 5, 4, 3};
+    assertArrayEquals(new int[]{ 3, 4, 5 }, ArrayExamples.sort(input1));
   }
 
-  @Test
-  public void testAverageWithoutLowest() {
-    double[] input1 = {  };
-    double ans = ArrayExamples.averageWithoutLowest(input1);
-    double exp = 0.0;
-    assertEquals(exp, ans, 0);
+ @Test
+  public void testSort3() {
+    int[] input1 = { 5, 3, 4};
+    assertArrayEquals(new int[]{ 3, 4, 5 }, ArrayExamples.sort(input1));
   }
 }
